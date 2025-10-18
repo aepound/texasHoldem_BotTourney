@@ -5,14 +5,14 @@ from ParentBot import ParentBot
 from typing import Dict, Any, Tuple
 from treys import Card
 
-class YourBotNameGoesHere(ParentBot):
+class QueenKiller(ParentBot):
     """
     Your custom bot implementation.
     Replace 'YourBotNameGoesHere' with your bot's name.
     
     Author(s): Your Name(s) Here
     """
-    def __init__(self, name: str = "your-bot-name-goes-here"):
+    def __init__(self, name: str = "queen-killer"):
         super().__init__(name)
         self.current_game_state = None  # Store for hand evaluation
         
@@ -21,7 +21,6 @@ class YourBotNameGoesHere(ParentBot):
         IMPLEMENT THIS METHOD with your bot's decision logic.
         Return: (action, amount) where action is 'fold', 'check', 'call', or 'raise'
         """
-        self.hand = game_state['hand']
         self.current_game_state = game_state
         can_check = game_state['current_bet'] == game_state['player_bet']
         hand_strength = self.get_hand_strength()
